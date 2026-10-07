@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="counter.css">
+<body>
+    <div id="info"><h3  class="name">counter game</h3></div>
+    <div id="main">
+       
+        <div id="button"  class="add">+</div>
+        <div   class="dis" type=""></div>
+        <div id="button"  class="sub">-</div>
+    </div>
+    <div id="clear">clear</div>
+    <script>
+        let t=0;
+
+       let d=document.querySelector(".dis");
+       d.innerHTML=t;
+       document.querySelector(".add").addEventListener("click",()=>{
+        t+=1;
+         d.innerHTML=t;
+
+       })
+             document.querySelector(".sub").addEventListener("click",()=>{
+        t-=1;
+         d.innerHTML=t;
+
+       })
+             document.querySelector("#clear").addEventListener("click",()=>{
+        t=0;
+         d.innerHTML=0;
+
+       })
+       
+       
+
+    
+    </script>
+</body>
+</html>
+
