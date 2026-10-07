@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="tictactoe.css">
+<body>
+    <div class="main">
+        <div id="box" class="one"></div>
+        <div id="box"  class="two"></div>
+        <div id="box"  class="three"></div>
+        <div id="box"  class="four"></div>
+        <div id="box"  class="five"></div>
+        <div id="box"  class="six" ></div>
+        <div id="box"  class="seven"></div>
+        <div id="box"   class="eight"></div>
+        <div id="box"   class="nine"></div>
+        
+    </div>
+    <div class="reset">RESET</div>
+    <div class="robo">ROBO</div>
+    <script>
+        let winingpattern=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+        let button=document.querySelectorAll('#box');
+        let chance=true //user 1 chance
+        let me="X";
+        let u="O";
+
+
+
+        button.forEach(btn => {
+            btn.onclick=()=>{
+            if(chance===true){
+                btn.innerText=me;
+                chance=false;
+
+            }
+            else{
+                btn.innerText="O"
+                chance=true;
+            }
+              check();
+            }
+            
+        }
+    );
+    let check=()=>{
+    winingpattern .forEach(element => {
+        let yaa=0;
+        if(button[element[0]].innerText!=""&&button[element[1]].innerText!=""&&button[element[2]].innerText!=""){
+            if(button[element[0]].innerText==button[element[1]].innerText&&button[element[2]].innerText==button[element[1]].innerText){
+                alert('WINNER')
+                
+            }
+        }
+       
+    
+  }
+);
+    }
+   document.querySelector(".reset").onclick=()=>{
+        button.forEach(i => {
+          i.innerText=""
+        });
+    }
+    </script>
+</body>
+</html>
