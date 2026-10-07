@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+
+
+    <link rel="stylesheet" href="bmi.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>BMI Calculator</h1>
+
+       <label for="weight">Weight (kg)</label>
+<input type="number" id="weight" placeholder="Enter weight">
+
+<label for="height">Height (cm)</label>
+<input type="number" id="height" placeholder="Enter height">
+
+        <button id="btn">Calculate BMI</button>
+
+        <h1 id="result">BMI >>>></h1>
+        <button id="btn2">reset</button>
+        <h3 id="status-re">Status</h3>
+        <div class="status"></div>
+        
+        <div id="history">
+           
+            <button class="hisbtn">history button</buttton>
+            <div class="history"></div>
+    
+        </div>
+    </div>
+    <script>
+
+        let btn=document.querySelector("#btn");
+        let ar=new Array();
+
+        btn.addEventListener("click",()=>{
+             let w=Number(document.querySelector("#weight").value);
+        let h=Number(document.querySelector("#height").value);
+            let ans=document.querySelector("#result");
+            let m=h/100;
+            ans.innerHTML=w/(m*m);
+            let f=ans.innerHTML;
+            let situ=document.querySelector(".status");
+              ar.push(f);
+            
+
+            if(f>30){
+situ.innerHTML="overweight";
+            }
+            else if(f<20){
+           situ.innerHTML="underweight";     
+            }
+            else{
+                situ.innerHTMl="okok.......";
+            }
+        })
+        let hisbtn=document.querySelector(".hisbtn");
+        hisbtn.addEventListener("click",()=>{
+            let history=document.querySelector(".history");
+            history.innerHTML=ar.join("<br>");
+        })
+        let btn2=document.querySelector("#btn2");
+        btn2.addEventListener("click",()=>{
+            let y=document.querySelector("#result");
+            y.innerHTML=0;
+             let situ=document.querySelector(".status");
+             situ.innerHTML=""
+
+        })
+
+    </script>
+
+</body>
+</html>
