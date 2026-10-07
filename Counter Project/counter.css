@@ -1,0 +1,84 @@
+body{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    background-color: rgb(105, 102, 100);
+}
+#main{
+    background-color: rgb(81, 72, 72);
+    display: flex;
+    justify-content: center;
+justify-content:space-around;
+border:2px,solid,black;
+width: 90vw;
+}
+#button{
+    height:15vh;
+   width: 10vw;
+   padding:0px;
+   margin-top:33px;
+   margin-bottom:15px;
+   border:2px,solid;
+   font-size: xx-large;
+   font-weight: bolder;
+background-color: aliceblue;
+border-radius:100%;
+text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+}
+.dis{
+       height:20vh;
+       background-color: aliceblue;
+   width:20vw;
+   padding:0px;
+   margin-top:15px;
+   margin-bottom:15px;
+   text-align:center;
+   display: flex;
+justify-content: center;
+align-items: center;
+font-size: 39px;
+font-weight: 900;
+
+  
+   
+}
+#info{
+      background-color:  rgb(81, 72, 72);
+    
+      width: 90vw;
+    border-top-left-radius:20px ;
+     border-top-right-radius:20px ;
+      color: aliceblue;
+    border-left:2px solid black;
+       border-right:2px solid black;
+          border-top:2px solid black;
+           
+    
+ 
+}
+.name{
+    text-align: center;
+   font-weight: bolder;
+}
+#clear{ position:relative;
+    top:50px;
+    right:-200px;
+
+     height:9vh;
+   width: 9vw;
+   border:5px,solid,black;
+   padding:0px;
+   font-weight: bolder;
+   background-color:  aliceblue;
+   display: flex;
+justify-content: center;
+align-items: center;
+
+}
